@@ -1,5 +1,7 @@
 @extends('layouts.admin')
+
 @section('content')
-@stop
-@section('footer')
+
+    <h1>Index</h1>
+
 @stop
