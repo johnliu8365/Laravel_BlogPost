@@ -23,12 +23,13 @@
                 <tr>
                     <td>{{$post->id}}</td>
                     <td>{{$post->user->name}}</td>
-                    <td>{{$post->category_id}}</td>
+                    <td>{{$post->category ? $post->category->name : ''}}</td>
                     <td><img height="50" src="{{$post->photo ? $post->photo->file : ''}}" alt="{{$post->photo ? $post->photo->id : 'No Photo'}}"></td>
                     <td>{{$post->title}}</td>
-                    <td>{{$post->body}}</td>
+                    <td>{{str_limit($post->body, 20)}}</td>
                     <td>{{$post->created_at->diffForHumans()}}</td>
                     <td>{{$post->updated_at->diffForHumans()}}</td>
+                    <td><button onclick="location.href='{{ route('admin.posts.edit', $post->id) }}'" class='btn btn-primary'>EDIT</button></td>
                 </tr>
             @endforeach
         @endif
