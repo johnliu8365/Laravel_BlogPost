@@ -21,7 +21,7 @@ class CreatePostsTable extends Migration
             $table->text('body');
             $table->timestamps();
 
-            $table->foregin('user_id')->references('id')->on('users')->ondelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->ondelete('cascade');
         });
     }
 

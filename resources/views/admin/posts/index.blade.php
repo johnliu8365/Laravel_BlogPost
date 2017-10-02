@@ -12,6 +12,8 @@
         <th>Photo</th>
         <th>Title</th>
         <th>Body</th>
+        <th>View Post</th>
+        <th>Comments</th>
         <th>Created</th>
         <th>Updated</th>
         <th>Function</th>
@@ -27,6 +29,8 @@
                     <td><img height="50" src="{{$post->photo ? $post->photo->file : ''}}" alt="{{$post->photo ? $post->photo->id : 'No Photo'}}"></td>
                     <td>{{$post->title}}</td>
                     <td>{{str_limit($post->body, 20)}}</td>
+                    <td><a href="{{ route('home.post', $post->slug) }}">View Post</a></td>
+                    <td><a href="{{ route('admin.comments.show', $post->id) }}">View Comments</a></td>
                     <td>{{$post->created_at->diffForHumans()}}</td>
                     <td>{{$post->updated_at->diffForHumans()}}</td>
                     <td><button onclick="location.href='{{ route('admin.posts.edit', $post->id) }}'" class='btn btn-primary'>EDIT</button></td>
