@@ -1,3 +1,15 @@
+# Laravel Blog Post System
+
+Use Laravel to create a blog post and comment system
+
+![alt text](https://github.com/johnliu8365/Laravel_BlogPost/blob/master/screenshot.gif)
+
+1. Laravel
+2. Laravel Collective Forms & HTML
+3. cviebrock/Eloquent-Sluggable
+4. TinyMCE
+5. Laravel Filemanager
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
